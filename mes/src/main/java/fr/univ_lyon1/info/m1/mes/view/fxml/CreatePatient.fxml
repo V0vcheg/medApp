@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="789.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.univ_lyon1.info.m1.mes.controller.CreatePatientController">
+   <children>
+      <VBox prefHeight="669.0" prefWidth="349.0" style="-fx-background-color: BA79D0;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" onMouseClicked="#backHome" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon Espace Santé">
+               <VBox.margin>
+                  <Insets left="2.0" top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <Button id="creationPatientButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="236.0" style="-fx-background-color: F3CCF7;" text="Inscription Patient">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fcf2f2" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Text layoutX="370.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez entrez vos Informations : ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="439.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" />
+      <Text layoutX="439.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SSID :" />
+      <TextField layoutX="338.0" layoutY="220.0" prefHeight="31.0" prefWidth="145.0" visible="false" />
+      <Text layoutX="439.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" />
+      <PasswordField fx:id="passwordInput" layoutX="544.0" layoutY="383.0" prefHeight="31.0" prefWidth="155.0" promptText="********" />
+      <TextField fx:id="namePatientCreateInput" layoutX="544.0" layoutY="193.0" prefHeight="31.0" prefWidth="155.0" promptText="Alice" />
+      <TextField fx:id="ssidCreateInput" layoutX="544.0" layoutY="251.0" prefHeight="31.0" prefWidth="155.0" promptText="12345678" />
+      <Button id="createPatientButton" layoutX="464.0" layoutY="523.0" mnemonicParsing="false" onAction="#createPatient" prefHeight="39.0" prefWidth="167.0" style="-fx-background-color: #ADE51A;" text="S'inscrire" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Text layoutX="439.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+      <TextField fx:id="loginPatientCreateInput" layoutX="544.0" layoutY="313.0" prefHeight="31.0" prefWidth="155.0" promptText="adress@wahoo.fr" />
+   </children>
+</AnchorPane>

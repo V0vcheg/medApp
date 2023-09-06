@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.univ_lyon1.info.m1.mes.controller.ProfilHPController">
+   <children>
+      <Pane layoutX="2.0" layoutY="161.0" prefHeight="508.0" prefWidth="784.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ScrollPane layoutX="25.0" layoutY="56.0" prefHeight="440.0" prefWidth="317.0">
+              <content>
+                <AnchorPane fx:id="prescriptionPane" minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="330.0">
+                     <children>
+                        <Label layoutY="14.0" prefHeight="19.0" prefWidth="88.0" text="Strategie :">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="strategyList" layoutX="89.0" layoutY="10.0" prefWidth="150.0" style="-fx-background-color: DFE3E8;" />
+                        <TextField fx:id="searchInput" layoutX="18.0" layoutY="53.0" prefHeight="26.0" prefWidth="151.0" promptText="Patient" />
+                        <Button layoutX="181.0" layoutY="54.0" mnemonicParsing="false" onAction="#notifySearch" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #4187EC;" text="Search" textFill="#171717">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="17.0" layoutY="194.0" prefHeight="19.0" prefWidth="90.0" text="Prescribe :">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="prescriptionInput" layoutX="17.0" layoutY="220.0" prefHeight="26.0" prefWidth="154.0" promptText="Presciption" />
+                        <Button layoutX="181.0" layoutY="220.0" mnemonicParsing="false" onAction="#prescribe" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #4187EC;" text="Prescribe" textFill="#171717">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <CardPane fx:id="defaultPrescriptionPane" layoutX="11.0" layoutY="264.0" prefHeight="161.0" prefWidth="289.0">
+                            <Label fx:id="defaultLabel1" prefHeight="38.0" prefWidth="243.0" style="-fx-padding:10;" text="Default Prescription (number 1)" />
+                        </CardPane>
+                        <ScrollPane layoutX="15.0" layoutY="93.0" prefHeight="99.0" prefWidth="280.0">
+                          <content>
+                            <AnchorPane fx:id="prescriptionPatientPane" minHeight="0.0" minWidth="0.0" prefHeight="98.0" prefWidth="279.0" />
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label layoutX="25.0" layoutY="6.0" prefHeight="35.0" prefWidth="294.0" text="Gérer Mes Prescriptions">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="profilProperty1" layoutX="386.0" layoutY="6.0" prefHeight="35.0" prefWidth="160.0" text="Mes RDV">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="profilProperty11" layoutX="392.0" layoutY="254.0" prefHeight="35.0" prefWidth="216.0" text="Chat">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <CardPane fx:id="meetPane" layoutX="386.0" layoutY="56.0" prefHeight="146.0" prefWidth="345.0" style="-fx-background-color: WHITE;">
+                <Label fx:id="defaultRdvLabel1" prefHeight="38.0" prefWidth="289.0" style="-fx-padding:10;" text="Alice Foo, date: 29/12/2022 15:30" />
+            </CardPane>
+            <ImageView fx:id="chatButton" fitHeight="38.0" fitWidth="37.0" layoutX="700.0" layoutY="253.0" onMouseClicked="#createMessage" pickOnBounds="true" preserveRatio="true" />
+            <CardPane fx:id="chatPane" layoutX="392.0" layoutY="294.0" prefHeight="186.0" prefWidth="345.0">
+                <Label fx:id="defaultChatLabel1" text="From : Alice Foo" />
+            </CardPane>
+            <ImageView fx:id="refreshButton" fitHeight="22.0" fitWidth="23.0" layoutX="455.0" layoutY="261.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="meetingButton" fitHeight="30.0" fitWidth="30.0" layoutX="694.0" layoutY="14.0" onMouseClicked="#scheduleMeeting" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="-4.0" prefHeight="161.0" prefWidth="794.0" style="-fx-background-color: #137AF7;">
+         <children>
+            <Circle fx:id="profilPicture" fill="DODGERBLUE" layoutX="105.0" layoutY="69.0" radius="66.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" />
+            <Label fx:id="profilName" layoutX="247.0" layoutY="46.0" prefHeight="89.0" prefWidth="458.0" text="M. Someone">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <Button id="logoutButton" layoutX="716.0" layoutY="16.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #F42900;" text="Logout" textFill="WHITE" />
+            <Line endX="370.0" endY="2.0" fill="#36c7da" layoutX="417.0" layoutY="159.0" startX="-417.0" startY="2.0" stroke="#5bbfdd" strokeWidth="15.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

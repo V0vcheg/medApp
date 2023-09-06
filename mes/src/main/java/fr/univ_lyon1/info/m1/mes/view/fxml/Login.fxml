@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="789.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.univ_lyon1.info.m1.mes.controller.LoginController">
+   <children>
+      <VBox prefHeight="669.0" prefWidth="349.0" style="-fx-background-color: #2A75F9;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" onMouseClicked="#backHome" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon Espace Santé">
+               <VBox.margin>
+                  <Insets left="2.0" top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Text layoutX="381.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se connecter" wrappingWidth="205.0">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <TextField layoutX="338.0" layoutY="220.0" prefHeight="31.0" prefWidth="145.0" visible="false" />
+      <Button id="createHPButton" layoutX="483.0" layoutY="393.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="145.0" style="-fx-background-color: #ADE51A;" text="Connexion" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Text layoutX="389.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login :" />
+      <TextField fx:id="loginInput" layoutX="504.0" layoutY="220.0" prefHeight="31.0" prefWidth="171.0" promptText="mon@adresse.fr" />
+      <Text layoutX="389.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" />
+      <PasswordField fx:id="passwordInput" layoutX="504.0" layoutY="301.0" promptText="********" />
+   </children>
+</AnchorPane>

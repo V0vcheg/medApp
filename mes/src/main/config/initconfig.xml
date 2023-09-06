@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<configuration>
+    <patients>
+        <patient ssid = "299010212345678">
+            <name>Alice Foo</name>    
+            <login>alice.foo</login> 
+            <password>aa</password>       
+        </patient>
+        <patient ssid = "199010212345678">
+            <name>Bob Bar</name>
+            <login>bob.bar</login> 
+            <password>bb</password>              
+        </patient>
+        <patient ssid = "102020212345678">
+            <name>Charles Boz</name>
+            <login>charles.boz</login> 
+            <password>cc</password>  
+        </patient>
+    </patients>
+    <professionals>
+        <professional type = "Dentist">
+            <nameP>Dr. Who</nameP>
+            <presc>Don't eat for one hour</presc>   
+            <login>dr.who</login> 
+            <password>ww</password>  
+            <comment>Too much fruits</comment>                    
+        </professional> 
+        <professional type = "Generaliste">
+            <nameP>Dr. Hulk</nameP>
+            <presc>Doliprane 1000</presc>  
+            <login>dr.hulk</login> 
+            <password>hh</password> 
+            <comment>Mal aux genoux</comment>  
+        </professional> 
+        <professional type = "Homeopath">
+            <nameP>Dr. Hahnemann</nameP>
+            <presc>Natrum Muriaticum 30CH</presc>  
+            <login>dr.hahne</login> 
+            <password>hh</password>   
+            <comment>Trop de fast-food</comment>  
+        </professional> 
+        <professional type = "Psycho">
+            <nameP>Dr. Strange</nameP>
+            <presc>Brain booster 2000</presc>  
+            <login>dr.strange</login> 
+            <password>ss</password>  
+            <comment>Experimental</comment> 
+        </professional>
+    </professionals>
+    <prescriptions>
+        <prescription id = "1">
+            <patientPr>299010212345678</patientPr>
+            <prescripteur>Dr. Who</prescripteur>
+            <content>One apple a day</content>            
+        </prescription>
+        <prescription id = "2">
+            <patientPr>299010212345678</patientPr>
+            <prescripteur>Dr. Who</prescripteur>
+            <content>Sport twice a week</content>
+        </prescription>
+        <prescription id = "3">
+            <patientPr>199010212345678</patientPr>
+            <prescripteur>Dr. Hulk</prescripteur>
+            <content>You're not sick</content>
+        </prescription>
+        <prescription id = "4">
+            <patientPr>102020212345678</patientPr>
+            <prescripteur>Dr. Hahnemann</prescripteur>
+            <content>Snake oil</content>
+        </prescription>
+    </prescriptions>
+    <messages>
+        <message>
+            <exp>dr.who</exp>
+            <dest>alice.foo</dest>
+            <text>Bonjour,Alice. Comment Allez-vous?</text>
+            <date>2022-12-10 15:00:00</date>
+        </message>
+        <message>
+            <exp>alice.foo</exp>
+            <dest>dr.who</dest>            
+            <text>Bonjour, Dr.Who. Très Bien et vous?</text>
+            <date>2022-12-10 19:00:00</date>
+        </message>
+    </messages>
+    <meetings>
+        <meeting>
+            <dateM>2023-01-01</dateM>
+            <patientM>299010212345678</patientM>
+            <hp>Dr. Who</hp>
+        </meeting>
+    </meetings>
+</configuration>
